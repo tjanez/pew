@@ -59,4 +59,5 @@ matrix:
       script: nix build -v --arg nixpkgs "import (fetchTarball ''https://github.com/NixOS/nixpkgs-channels/archive/$CHANNEL_HASH.tar.gz'') {}"
       env: CHANNEL_HASH=nixos-unstable
   allow_failures:
+    - env: CHANNEL_HASH=07b42ccf2de451342982b550657636d891c4ba35
     - env: CHANNEL_HASH=nixos-unstable
